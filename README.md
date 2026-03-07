@@ -1,2 +1,0 @@
-# Cloud_institute
-Bot

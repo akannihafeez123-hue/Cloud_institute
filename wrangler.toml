@@ -1,0 +1,15 @@
+name = "institutional-scanner"
+main = "quantum.js"
+compatibility_date = "2026-03-07"
+compatibility_flags = ["nodejs_compat"]
+
+# Fires the scheduled() handler every 3 minutes — this triggers the scanner
+[triggers]
+crons = ["*/3 * * * *"]
+
+# KV namespace stores scan on/off state (/scan and /unscan commands)
+# SETUP: Replace the id below with your real KV namespace ID
+[[kv_namespaces]]
+binding = "SCANNER_STATE"
+id = "824847e4aca546828ced928c9580b21f"
+                
